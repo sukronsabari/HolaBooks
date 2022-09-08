@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="HolaBooks">
+    <meta property="og:title" content="Manage your bookself" />
+    <meta property="og:description" content="Hola books can manage your bookself using localStorage" />
+    <meta property="og:image" itemprop="image" content="https://i.ibb.co/Mp5MwfN/Screen-Shot-2022-09-08-at-10-22-01.png">
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -165,7 +170,7 @@
                                 <input type="text" name="author" id="author" placeholder="Author" required>
                             </div>
                             <div class="input">
-                                <input type="number" name="year" id="year" placeholder="Year" required>
+                                <input type="number" name="year" min="1000" id="year" placeholder="Year" required>
                             </div>
                             <div class="select-book-cover">
                                 <h3>Select book cover</h3>
