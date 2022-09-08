@@ -317,7 +317,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (readedBookList.children.length < 1) {
             readedBookList.innerHTML = `<h3 class="text-muted">No Books</h3>`;
-        } else if (unreadBookList.children.length < 1) {
+        }
+        
+        if (unreadBookList.children.length < 1) {
             unreadBookList.innerHTML = `<h3 class="text-muted">No Books</h3>`;
         }
 
