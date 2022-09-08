@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>HolaBooks</title>
+</head>
+
+<body>
+    <main>
+        <aside class="aside-nav">
+            <div class="container">
+                <div class="hamburger-close-btn">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="brand">
+                    <a href="#">
+                        <i class="fa-solid fa-swatchbook"></i>
+                        <h1><span>Hola</span>Books</h1>
+                    </a>
+                </div>
+                <nav class="sidenav">
+                    <ul class="links">
+                        <li>
+                            <div href="" class="link disable">
+                                <i class="fa-solid fa-bell"></i>
+                                <span>notification</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="" class="link" data-id-section="book-stats">
+                                <i class="fa-solid fa-square-poll-vertical"></i>
+                                <span>books stats</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="" class="link active" data-id-section="my-books">
+                                <i class="icon fa-solid fa-book"></i>
+                                <span>my books</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="" class="link">
+                                <i class="icon fa-solid fa-gear"></i>
+                                <span>setting</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="" class="link disable">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <span>profile</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="content">
+            <div class="hamburger-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <section id="book-stats" class="book-stats">
+                <header>
+                    <h1>Book Stats</h1>
+                </header>
+                <div class="container">
+                    <div class="books-section">
+                        <div class="books-info">
+                            <h2>Books Info</h2>
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-swatchbook"></i>
+                                    </div>
+                                    <p>Total <br> Books</p>
+                                    <p class="total-books-count">0</p>
+                                </div>
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </div>
+                                    <p>Readed <br> Books</p>
+                                    <p class="readed-books-count">0</p>
+                                </div>
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-book"></i>
+                                    </div>
+                                    <p>Unreaded <br> Books</p>
+                                    <p class="unreaded-books-count">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent-books">
+                            <h2>Recent Books</h2>
+                            <div class="recent-book-list">
+                                <div class="book-item">
+                                    <div class="img-container">
+                                        <img src="./src/images/books-cover/book-cover-1.png" alt="book-img" class="book-cover">
+                                    </div>
+                                    <p class="book-title">Coming Soon</p>
+                                    <p class="book-author">Coming Soon</p>
+                                </div>
+                                <div class="book-item">
+                                    <div class="img-container">
+                                        <img src="./src/images/books-cover/book-cover-3.png" alt="book-img" class="book-cover">
+                                    </div>
+                                    <p class="book-title">Coming Soon</p>
+                                    <p class="book-author">Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="books-activity">
+                        <h2>Activity</h2>
+                        <div class="activity-list-container">
+                            <div class="activity-dialog dialog-danger">successfully deleted activity</div>
+                            <p>Total Activity</p>
+                            <p class="activity-count">0</p>
+                            <div class="activity-list">
+                                <!-- activity-item -->
+                            </div>
+                            <button class="activity-list-clear-btn">clear activity</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="my-books" class="my-books open-section">
+                <header>
+                    <h1>My Books</h1>
+                    <div class="header-content">
+                        <div class="tab-links">
+                            <div class="unread-books-link active" data-id-booklist="unread-book-list">Unread Books</div>
+                            <div class="readed-books-link" data-id-booklist="readed-book-list">Readed Books</div>
+                        </div>
+                        <form id="search-form" class="search-form">
+                            <input ztype="text" id="search" name="search" placeholder="Search...">
+                            <div class="search-form-close-btn">
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </div>
+                        </form>
+                        <div class="search-form-open-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <button type="button" class="btn add-book-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>New Book</span>
+                        </button>
+                    </div>
+                </header>
+                <div class="modal">
+                    <div class="modal-inner">
+                        <h2 class="modal-header">New Book</h2>
+                        <form id="add-book" class="add-book">
+                            <div class="input">
+                                <input type="text" name="title" id="title" placeholder="Title" required>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="author" id="author" placeholder="Author" required>
+                            </div>
+                            <div class="input">
+                                <input type="number" name="year" id="year" placeholder="Year" required>
+                            </div>
+                            <div class="select-book-cover">
+                                <h3>Select book cover</h3>
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-1" name="book-cover" 
+                                        value="https://i.ibb.co/yX6ZrNg/book-cover-1.png" 
+                                        checked required
+                                        >
+                                        <label for="book-cover-1" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-1.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-2" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/D5KQ7wQ/book-cover-2.png"
+                                        >
+                                        <label for="book-cover-2" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-2.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-3" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/PcPK8Nz/book-cover-3.png"
+                                        >
+                                        <label for="book-cover-3" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-3.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-4" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/MVCB3BQ/book-cover-4.png"
+                                        >
+                                        <label for="book-cover-4" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-4.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-5" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/PrzwwJL/book-cover-5.png"
+                                        >
+                                        <label for="book-cover-5" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-5.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-6" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/FsjmGwp/book-cover-6.png"
+                                        >
+                                        <label for="book-cover-6" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-6.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-7" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/Th1yKvq/book-cover-7.png"
+                                        >
+                                        <label for="book-cover-7" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-7.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" 
+                                        id="book-cover-8" 
+                                        name="book-cover" 
+                                        value="https://i.ibb.co/1zbHKNw/book-cover-8.png"
+                                        >
+                                        <label for="book-cover-8" tabindex="0">
+                                            <img src="./src/images/books-cover/book-cover-8.png" alt="book-cover" class="cover-preview">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-checkbox">
+                                <label for="isReaded">Is Readed?</label>
+                                <input type="checkbox" id="isReaded">
+                            </div>
+                            <div class="form-btn-container">
+                                <button type="reset" id="close-modal-btn">Close</button>
+                                <button type="submit" id="submit-btn">Add Book</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="unread-book-list show-booklist" id="unread-book-list" data-booklist>
+                        <div class="book-item">
+                            <div class="book-actions-btn">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <div class="book-actions">
+                                <div class="edit">
+                                    <i class="fa-solid fa-pencil"></i>
+                                    <span>Edit</span>
+                                </div>
+                                <div class="change-book-status">
+                                    <i class="fa-solid fa-check-double"></i>
+                                    <span>Save</span>
+                                </div>
+                                <div class="delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                    <span>delete</span>
+                                </div>
+                            </div>
+                            <div class="img-container">
+                                <img src="./src/images/books-cover/book-cover-3.png" alt="book-img" class="book-cover">
+                            </div>
+                            <p class="book-title">Mentari Pagi</p>
+                            <p class="book-author">Tere Liye</p>
+                            <p class="book-year">2005</p>
+                        </div>
+                    </div>
+                    <div class="readed-book-list" id="readed-book-list" data-booklist>
+
+                    </div>
+                </div>
+            </section>
+            <div class="custom-dialog-container">
+                <div class="custom-dialog">Success adding book</div>
+            </div>
+        </div>
+    </main>
+    <script src="./src/scripts/storage.js"></script>
+    <script src="./src/scripts/app.js"></script>
+    <script src="./src/scripts/index.js"></script>
+</body>
+
+</html>
